@@ -1,0 +1,26 @@
+:root {
+	/*colors*/
+	--primary-color: ;
+	--secondary-color: ;
+	--book-card-background: ;
+	--main-logo-color: ; 
+	--text-color: black; 
+
+	/*fontsize*/
+	--main-title-fontsize: ;
+	--secondary-title-fontsize: ;
+	--body-fontsize: ;
+	--body-fontsize-smal: ;
+
+	/*padding*/
+	--padding-smal: ;
+	--padding-medium: ;
+	--margin-smal: ;
+	--margin-medium: ;
+	
+	--button-hover-color: ;
+
+
+
+	
+}
