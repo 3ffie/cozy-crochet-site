@@ -1,5 +1,6 @@
 :root {
 	/*colors*/
+	--header-color: #FFD8A9;
 	--primary-color: ;
 	--secondary-color: ;
 	--book-card-background: ;
@@ -19,8 +20,4 @@
 	--margin-medium: ;
 	
 	--button-hover-color: ;
-
-
-
-	
 }

@@ -1,0 +1,16 @@
+.header {
+	background-color:var(--header-color);
+	width: 100vw;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.navigation ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 2rem;
+	margin-top: 12rem;
+	margin-right: 2rem;
+}
