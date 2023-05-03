@@ -1,9 +1,9 @@
-# E-Crochet
-
-This repository contains a inporation site for crochet resepies and insporation for crhochet projects. 
+### Cozy Crochet
+This repository contains a site centred around crochet. Here it will provide crochet patterns and inspiration for crochet projects. 
 
 ## MVP
-the MVP is to make a usable website where i can toogle between differen pages and utalise evertyhing that i have learned
+The MVP is to create a site for crochet patterns and crochet project inspiration.
+Here i want to render a list of crochet patterns and render a list of blog posts. I also i want to make the website accessible and responsive.
 
 ## Deployment 
 
