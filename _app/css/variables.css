@@ -1,23 +1,27 @@
 :root {
 	/*colors*/
-	--header-color: #FFD8A9;
-	--primary-color: ;
-	--secondary-color: ;
-	--book-card-background: ;
-	--main-logo-color: ; 
-	--text-color: black; 
+	--color-header: #FFD8A9;
+	--color-background: #FDEEDC;
+	--color-foreground: #883F3F;
+	--color-pattern-card-background: var(--color-header);
+	
+	--color-font-title: #883F3F;
+	--color-font-text: #0000;
+	--button-hover-color: #400400;
 
 	/*fontsize*/
-	--main-title-fontsize: ;
-	--secondary-title-fontsize: ;
-	--body-fontsize: ;
-	--body-fontsize-smal: ;
+	--fontsize-header-navigation: 2rem;
 
-	/*padding*/
-	--padding-smal: ;
-	--padding-medium: ;
-	--margin-smal: ;
-	--margin-medium: ;
+	--fontsize-title-large: 4rem;
+	--fontsize-title-medium: 3rem;
+	--fontsize-title-small: 1.5rem;
+
+	--fontsize-text-medium: ;
+	--fontsize-text-small: ;
 	
-	--button-hover-color: ;
+	/*padding and margin*/
+	--padding-gap: 1rem;
+	--padding-gap-medium: 1.5rem;
+	--margin-gap: 2rem;
+	--margin-gap-medium: 2.5rem;
 }
