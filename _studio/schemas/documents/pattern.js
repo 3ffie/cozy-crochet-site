@@ -1,7 +1,6 @@
-
 /**
  * @TODO make a on field for yarn
- * add alt text input to image
+ *
  */
 export default {
 	title: 'Pattern',
@@ -26,6 +25,18 @@ export default {
 			title: 'First Image',
 			name: 'firstImage',
 			type: 'image',
+			validiation: rule => rule.required(),
+			options: {
+            hotspot: true,
+          },
+			fields: [
+				{
+					title: 'Alternative text',
+					name: 'alt',
+					type: 'string',
+					validation: rule => rule.required()
+				}
+			]
 		},
 		{
 			title: 'Description',
