@@ -3,7 +3,7 @@
  */
 import { sanity } from "../sanity.js";
 
-export default async function blogList() {
+export default async function BlogList() {
 	const query = `*[_type == 'blog']{
 		"image": image.asset->url,
 		"blogAltText": image.alt,

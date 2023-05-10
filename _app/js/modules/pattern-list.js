@@ -1,6 +1,6 @@
 import { sanity } from "../sanity.js";
 
-export default async function patternList() {
+export default async function PatternList() {
 	const query = `*[_type == 'pattern']{
 		title,
 		"coverImage": firstImage.asset->url, 

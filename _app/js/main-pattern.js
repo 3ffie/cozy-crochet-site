@@ -1,3 +1,5 @@
-import patternList from "./modules/pattern-list.js"
+import PatternList from "./modules/pattern-list.js"
+import Navigation from "./modules/navigation.js";
 
-patternList();
+await PatternList();
+Navigation();

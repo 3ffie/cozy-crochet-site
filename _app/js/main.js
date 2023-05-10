@@ -1,5 +1,7 @@
-import patternList from "./modules/pattern-list.js"
-import blogList from "./modules/blog-list.js";
+import PatternList from "./modules/pattern-list.js"
+import BlogList from "./modules/blog-list.js";
+import Navigation from "./modules/navigation.js";
 
-patternList();
-blogList();
+await PatternList();
+await BlogList();
+Navigation();
