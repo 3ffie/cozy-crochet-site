@@ -35,9 +35,37 @@ export default {
 			]
 		},
 		{
-			title: '',
-			name: '',
-			type: '',
+			title: 'Preview',
+			name: 'preview',
+			type: 'text',
+			description: 'A short preview text that will display on the main blog page',
+			rows: 3,
+			validation: rule => rule.required().min(10).max(80)
+		},
+		{
+			title: 'Description',
+			name: 'description',
+			type: 'text',
+		},
+		{
+			title: 'Blog Text',
+			name: 'blogText',
+			type: 'array',
+			of: [
+				{
+					type: 'block'
+				},
+				{
+					type: 'image',
+					fields: [
+						{	
+							title: 'Alternative text',
+							name: 'alt',
+							type: 'string',
+						}
+					]
+				}
+			]
 		}
 	]
 }
