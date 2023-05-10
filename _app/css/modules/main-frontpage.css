@@ -1,0 +1,7 @@
+.frontpage__welcome-container {
+	font-family: 'Rufina', serif;
+	justify-content: center;
+	display: grid;
+	grid-column-start: 2;
+	text-align: center;
+}
