@@ -1,3 +1,5 @@
-import blogList from "./modules/blog-list.js"
+import BlogList from "./modules/blog-list.js"
+import Navigation from "./modules/navigation.js";
 
-blogList();
+await BlogList();
+Navigation();
