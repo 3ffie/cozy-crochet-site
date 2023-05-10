@@ -27,7 +27,6 @@ export default async function patternList() {
 			patternCard.className = 'pattern__card';
 			patternImageBox.className = 'pattern__image-box';
 			
-			console.log(patternCard)
 			patternImage.className = 'pattern__image';
 			patternImage.src = pattern.coverImage;
 			patternImage.alt = pattern.altText;
@@ -37,9 +36,9 @@ export default async function patternList() {
 		}
 
 		return patternListContainer;
-	 }
+	}
 
-	 function renderHTML(){
+	 function renderHTML() {
 		const patternListContainer = createPatternListContainerDOM();
 		document.body.appendChild(patternListContainer);
 	 }
