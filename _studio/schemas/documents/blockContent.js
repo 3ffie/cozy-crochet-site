@@ -1,4 +1,5 @@
 // found information here: https://www.sanity.io/docs/portable-text-editor-configuration
+// did not end up using this schema because the standard block gave alot of editing options
 export default {
 	title: 'Block Content',
 	name: 'blockContent',

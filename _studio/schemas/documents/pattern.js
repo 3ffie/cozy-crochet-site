@@ -1,5 +1,5 @@
 /**
- * @TODO make a on field for yarn
+ * @TODO add a link section to the schema
  *
  */
 export default {
