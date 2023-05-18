@@ -2,25 +2,26 @@
   @TODO create the right path for the link of pattern titles
  */
 import { sanity } from "../sanity.js";
+import fetchPatternFrontPage from "./fetch-frontpage-pattern.js";
 
 export default async function FrontpagePattern() {
-	const query = `*[_type == "pattern"][0...3]{
+/*	const query = `*[_type == "pattern"][0...3]{
 		title,
 		"slug": slug.current,
 		"cover": firstImage.asset->url, 
 		"altText": firstImage.alt,
 	 }`;
 
-	 const frontpagePatterns = await sanity.fetch(query);
-
+	 const frontpagePatterns = await sanity.fetch(query);*/
+const frontpagePatterns = await fetchPatternFrontPage();
 	 function createFrontpagePatternContainerDOM() {
 		const frontpagePatternContainer = document.createElement('div');
 		const frontpagePatternHeader = document.createElement('h3');
 		const frontpagePatternButton = document.createElement('a');
 
-		frontpagePatternContainer.className = 'frontpage-pattern';
+		frontpagePatternContainer.className = 'frontpage-pattern grid';
 
-		frontpagePatternHeader.className = 'frontpage-pattern__header';
+		frontpagePatternHeader.className = 'frontpage-pattern__header grid__column--12';
 		frontpagePatternHeader.textContent = 'AVAILABLE PATTERNS';
 
 		frontpagePatternButton.className = 'frontpage-pattern__button';
@@ -47,7 +48,7 @@ export default async function FrontpagePattern() {
 			frontpagePatternCard.appendChild(frontpagePatternTitle);
 			frontpagePatternLink.appendChild(frontpagePatternTitle);
 			
-			frontpagePatternCard.className = 'frontpage-pattern__card';
+			frontpagePatternCard.className = 'frontpage-pattern__card grid__column--2';
 			
 			frontpagePatternImageBox.className = 'frontpage-pattern__image-box';
 
@@ -62,7 +63,7 @@ export default async function FrontpagePattern() {
 
 			frontpagePatternLink.className = 'frontpage-pattern__page-link';
 			frontpagePatternLink.href = "/pattern/index.html"
-
+			console.log(frontpagePatternContainer);
 		}
 		return frontpagePatternContainer;
 	}
@@ -74,3 +75,4 @@ export default async function FrontpagePattern() {
 
 	renderHTML();
 }
+

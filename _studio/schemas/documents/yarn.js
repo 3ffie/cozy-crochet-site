@@ -35,15 +35,15 @@ export default {
 	
 	preview: {
 		select: {
-			brand_name: 'brand',
+			brand_name: 'brand.yarnBrand',
+			field_type: 'reference',
 			yarn_name: 'nameOfYarn',
 			yarn_color: 'color',
 		},
 
 		prepare: (fields) => {
 			return {
-				title: `${fields.brand_name}: ${fields.yarn_name}- ${fields.yarn_color}`,
-				subtitle: ''
+				title: `${fields.brand_name}: ${fields.yarn_name}, ${fields.yarn_color}`
 			}
 		}
 	}

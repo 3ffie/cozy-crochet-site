@@ -1,0 +1,26 @@
+.pattern__card {
+	background-color: blue;
+	width: 100%;
+	height: 100%;
+}
+
+.pattern__title {
+	font-family: 'Rufina', serif;
+	font-size: var(--fontsize-title-small);
+}
+
+.pattern__image-box {
+	width: 100%;
+	height: 100%;
+	background-color: palevioletred;
+	overflow: hidden;
+	object-fit: contain;
+	background-image: cover;
+	background-position: center;
+
+}
+
+.pattern__image {
+	width: 100%;
+	height: 100%;
+}
