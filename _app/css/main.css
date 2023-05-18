@@ -5,4 +5,6 @@
 @import "./grid.css";
 
 @import "./modules/header.css";
-@import "./modules/main-frontpage.css";
+@import "./modules/frontpage-main.css";
+@import "./modules/blog-list.css";
+@import "./modules/pattern-list.css";

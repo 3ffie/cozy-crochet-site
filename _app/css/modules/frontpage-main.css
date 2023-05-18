@@ -1,0 +1,23 @@
+.frontpage__welcome-container {
+	font-family: 'Rufina', serif;
+	justify-content: center;
+	grid-column-start: 2;
+	text-align: center;
+	margin: var(--margin-gap-medium);
+}
+
+.frontpage-pattern__card {
+	width: 100%;
+	height: 100%;
+	background-color: blue;
+}
+
+.frontpage-pattern__image-box {
+	width: 100%;
+	height: 100%;
+}
+
+.frontpage-pattern__image {
+	width: 100%;
+	height: 100%;
+}
