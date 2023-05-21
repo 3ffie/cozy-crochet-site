@@ -12,7 +12,7 @@ export default async function PatternList() {
 
 	 function createPatternListContainerDOM() {
 		const patternListContainer = document.createElement('div');
-			patternListContainer.className = 'pattern-list grid';
+			patternListContainer.className = 'pattern-list grid grid__column-mobile--12';
 
 		for (const pattern of patterns) {
 			const patternCard = document.createElement('a');
@@ -29,7 +29,7 @@ export default async function PatternList() {
 			patternCard.appendChild(patternTitle);
 			patternImageBox.appendChild(patternImage);
 
-			patternCard.className = 'pattern__card grid__column--3';
+			patternCard.className = 'pattern__card grid__column--3 grid__column-mobile--12';
 			patternImageBox.className = 'pattern__image-box';
 			
 			patternImage.className = 'pattern__image';
