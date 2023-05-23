@@ -61,8 +61,11 @@ export default async function FrontpageBlogs() {
 		return frontpageBlogContainer
 	}
 	function renderHTML() {
+		const mainElement = document.querySelector(".main-frontpage__script")
 		const frontpageBlogContainer = createFrontpageBlogContainerDOM();
+		
 		document.body.appendChild(frontpageBlogContainer);
+		mainElement.appendChild(frontpageBlogContainer);
 	}
 	renderHTML();
 }
