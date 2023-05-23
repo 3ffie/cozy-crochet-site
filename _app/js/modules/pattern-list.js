@@ -39,7 +39,6 @@ export default async function PatternList() {
 			patternTitle.className = 'pattern__title';
 			patternTitle.innerText = pattern.title;
 		}
-
 		return patternListContainer;
 	}
 
@@ -50,6 +49,5 @@ export default async function PatternList() {
 		document.body.appendChild(patternListContainer);
 		mainElement.appendChild(patternListContainer);
 	 }
-
 	 renderHTML();
 }

@@ -4,6 +4,7 @@ body {
 	font-family: 'Rufina', serif;
 	background-color: var(--color-background);
 	color: var(--color-font-text);
+	overflow-x: hidden;
 }
 
 a:hover {

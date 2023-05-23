@@ -41,10 +41,10 @@ export default async function GetRecipeSlug() {
 			const filterPatternList = recipes.filter(recipes => recipes.title === slug);
 			console.log(filterPatternList);
 		
-			//const recipeTitle = document.createElement('div');
+			const recipeTitle = document.createElement('div');
 			
-			//recipeTitle.innerText = `${filterPatternList}`;
-			//recipeTitle.className = 'recipe__title';
+			recipeTitle.innerText = `${filterPatternList.recipe.title}`;
+			recipeTitle.className = 'recipe__title';
 			
 			recipeContainer.appendChild(filterPatternList);
 			//recipeContainer.innerText(`${slug.recipe.title}`)
@@ -56,7 +56,6 @@ export default async function GetRecipeSlug() {
 	
 	function renderHTML() {
 		const recipeContainer = createRecipeContainerDOM();
-		
 		document.body.appendChild(recipeContainer);
 	}
 	renderHTML();
