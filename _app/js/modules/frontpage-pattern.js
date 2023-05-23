@@ -67,8 +67,11 @@ const frontpagePatterns = await FetchProductFrontPage();
 	}
 
 	function renderHTML() {
+		const mainElement = document.querySelector('.main-frontpage__script')
 		const frontpagePatternContainer = createFrontpagePatternContainerDOM();
+		
 		document.body.appendChild(frontpagePatternContainer);
+		mainElement.appendChild(frontpagePatternContainer)
 	}
 	renderHTML();
 }
