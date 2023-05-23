@@ -21,3 +21,8 @@
 	width: 100%;
 	height: 100%;
 }
+
+.frontpage-pattern__header {
+	margin-top: var(--margin-gap);
+	text-align: center;
+}

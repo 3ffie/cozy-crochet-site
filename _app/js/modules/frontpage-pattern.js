@@ -1,10 +1,9 @@
 /**
   @TODO create the right path for the link of pattern titles
  */
-import { sanity } from "../sanity.js";
-import fetchPatternFrontPage from "./fetch-frontpage-pattern.js";
+import FetchProductFrontPage from "./fetch-frontpage-pattern.js";
 
-export default async function FrontpagePattern() {
+export default async function FrontpagePatterns() {
 /*	const query = `*[_type == "pattern"][0...3]{
 		title,
 		"slug": slug.current,
@@ -13,7 +12,8 @@ export default async function FrontpagePattern() {
 	 }`;
 
 	 const frontpagePatterns = await sanity.fetch(query);*/
-const frontpagePatterns = await fetchPatternFrontPage();
+const frontpagePatterns = await FetchProductFrontPage();
+
 	 function createFrontpagePatternContainerDOM() {
 		const frontpagePatternContainer = document.createElement('div');
 		const frontpagePatternHeader = document.createElement('h3');
@@ -56,8 +56,6 @@ const frontpagePatterns = await fetchPatternFrontPage();
 			frontpagePatternImage.src = frontpagePattern.cover;
 			frontpagePatternImage.alt = frontpagePattern.altText;
 
-			console.log(frontpagePatternContainer);
-
 			frontpagePatternTitle.className = 'frontpage-pattern__title';
 			frontpagePatternTitle.innerText = frontpagePattern.title;
 
@@ -72,7 +70,6 @@ const frontpagePatterns = await fetchPatternFrontPage();
 		const frontpagePatternContainer = createFrontpagePatternContainerDOM();
 		document.body.appendChild(frontpagePatternContainer);
 	}
-
 	renderHTML();
 }
 
