@@ -1,8 +1,15 @@
 .footer {
-	background-color: var(	--color-foreground);
-	height: 15rem;
-	width: auto;
+	background-color: var(--color-foreground);
+	width: 100%;
+	height: auto;
 	padding: var(--padding-gap);
+}
+
+.footer__icons {
+	display: flex;
+	align-content: end;
+	gap: 1rem;
+	margin-top: 4rem;
 }
 
 .footer__icons-facebook {
@@ -32,6 +39,37 @@
 	top: 2.5rem;
 	height: 2.5rem;
 	width: 2.5rem;
+}
+
+.footer__content li{
+	display: flex;
+	font-family: 'Concert One', cursive;
+	font-size: 1rem;
+	color: white;
+	letter-spacing: 0.2rem;
+	text-decoration: underline;
+	margin-top: 2rem;
+	margin-left: 2rem;
+	margin-bottom: 2rem;
+}
+
+/*Mobile*/
+@media screen and (max-width: 1024px) {
+	.footer__content-list {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.footer__icons {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		align-self: center;
+		justify-content: space-around;
+	}
 }
 
 
