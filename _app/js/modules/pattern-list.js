@@ -29,7 +29,7 @@ export default async function PatternList() {
 			patternCard.appendChild(patternTitle);
 			patternImageBox.appendChild(patternImage);
 
-			patternCard.className = 'pattern__card grid__column--3 grid__column-mobile--12';
+			patternCard.className = 'pattern__card grid__column--4 grid__column-mobile--12';
 			patternImageBox.className = 'pattern__image-box';
 			
 			patternImage.className = 'pattern__image';
