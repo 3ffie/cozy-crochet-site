@@ -15,7 +15,7 @@ export default async function BlogList() {
 
 	 function createBlogListContainerDOM() {
 		const blogListContainer = document.createElement('div');
-			blogListContainer.className = 'blog-list';
+			blogListContainer.className = 'blog-list grid grid__column-mobile--12';
 
 		for (const blog of blogs) {
 			const blogCard = document.createElement('div');
@@ -30,7 +30,7 @@ export default async function BlogList() {
 			blogCard.appendChild(blogTitle);
 			blogCard.appendChild(blogPreviewText);
 
-			blogCard.className = 'blog__card';
+			blogCard.className = 'blog__card grid__column--4 grid__column-mobile--12';
 			blogImageBox.className = 'blog__image-box';
 
 			console.log(blogCard);
@@ -40,15 +40,20 @@ export default async function BlogList() {
 			
 			blogTitle.className = 'blog__title';
 			blogTitle.innerText = blog.title;
-	 	}
+
+			blogPreviewText.className = 'blog__preview';
+			blogPreviewText.innerText = blog.preview;
+		}
 		
 		return blogListContainer;
 	}
 
 	function renderHTML() {
+		const mainElement = document.querySelector('.main-blog');
 		const blogListContainer = createBlogListContainerDOM();
-		document.body.appendChild(blogListContainer);
-	}
 
+		document.body.appendChild(blogListContainer);
+		mainElement.appendChild(blogListContainer);
+	}
 	renderHTML();
 }
