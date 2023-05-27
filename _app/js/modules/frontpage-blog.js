@@ -1,18 +1,21 @@
-import FetchProductFrontPage from "./fetch-frontpage-pattern.js";
-import { blogs } from "./fetch-frontpage-pattern.js";
+import FetchProductFrontPage from "./fetch-frontpage-products.js";
+
+// imported this function to get the blog posts, but the pictures do not show up. 
+import { blogs } from "./fetch-frontpage-products.js";
 
 export default async function FrontpageBlogs() {
 
 	//const fetchedBlogs = await fetch(blogFrontpage);
+	
 	const frontpageBlogs = await blogs();
 	//const blogies = blogs();
 
 
 	/**
 	 * 
-	 * @returns 
+	 * 
 	 * @todo fix the path to blog and the fetch file. 
-	 * maake the picture show up
+	 * make the picture show up
 	 * make it pretty!!
 	 */
 

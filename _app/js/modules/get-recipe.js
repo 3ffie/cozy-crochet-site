@@ -1,10 +1,14 @@
-//writw the code here
+//write the code here
 
 import { readUrl } from "../util/utils.js";
 import { sanity } from "../sanity.js"
 
+
 export default async function GetRecipeSlug() {
-	const query = `*[_type == 'pattern']{
+	
+	const slug = readUrl();
+
+	const query = `*[_type == 'pattern' && slug.current =="${slug}"]{
 		_id,
 		title,
 		"slug": slug.current,
@@ -21,35 +25,27 @@ export default async function GetRecipeSlug() {
 		}
 	}`;
 	
-	const recipes = await sanity.fetch(query)
-	console.log(recipes);
+	const recipe = await sanity.fetch(query)
+	console.log(recipe);
 	
-	const slug = readUrl();
+	
 	console.log(slug);
 	
-	
-	if (slug !== undefined) {
-		console.log(slug);
-	}
 	
 	function createRecipeContainerDOM(){
 		const recipeContainer = document.createElement('div');
 		recipeContainer.className = 'recipe__box';
 		
 		
-		for (const recipe of recipes) {
-			const filterPatternList = recipes.filter(recipes => recipes.title === slug);
-			console.log(filterPatternList);
-		
 			const recipeTitle = document.createElement('div');
 			
-			recipeTitle.innerText = `${filterPatternList.recipe.title}`;
+			recipeTitle.textContent = `${recipe[0].title}`;
 			recipeTitle.className = 'recipe__title';
 			
-			recipeContainer.appendChild(filterPatternList);
+			recipeContainer.appendChild(recipeTitle);
 			//recipeContainer.innerText(`${slug.recipe.title}`)
 			
-		}
+	
 		
 		return recipeContainer;
 	}

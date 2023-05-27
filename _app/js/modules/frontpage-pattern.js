@@ -1,7 +1,7 @@
 /**
   @TODO create the right path for the link of pattern titles
  */
-import FetchProductFrontPage from "./fetch-frontpage-pattern.js";
+import FetchProductFrontPage from "./fetch-frontpage-products.js";
 
 export default async function FrontpagePatterns() {
 /*	const query = `*[_type == "pattern"][0...3]{

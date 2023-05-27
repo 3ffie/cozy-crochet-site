@@ -18,12 +18,31 @@ export default async function FetchProductFrontPage() {
 		"altText": image.alt, 
 		}`;
 
-	 const frontpageProducts = await sanity.fetch(patternFrontpage, blogFrontpage);
+	const carloquery = `[
+		"patterns": *[_type == "pattern"][0...3]{
+			_id,
+			title,
+			"slug": slug.current,
+			"cover": firstImage.asset->url, 
+			"altText": firstImage.alt,
+			 },
+		"blogs": *[_type == "blog"][0...3]{
+			_id,
+			title,
+			preview,
+			"slug": slug.current,
+			"image": image.asset->url, 
+			"altText": image.alt, 
+			}
+	]`
+
+	 const frontpageProducts = await sanity.fetch(carloquery);
 	 
-	 console.log(blogFrontpage);
+	 console.log(frontpageProducts);
 	 return frontpageProducts;
 }
-
+// Made this function as a second attempt to fecth the blog posts for the frontpage.
+// It did not work with first function, the pictures do not show. 
 export async function blogs() {
 	const blogFrontpagee = `*[_type == "blog"][0...3]{
 		_id,
