@@ -1,13 +1,21 @@
-import FetchProductFrontPage from "./fetch-frontpage-products.js";
-
+//import FetchProductFrontPage from "./fetch-frontpage-products.js";
 // imported this function to get the blog posts, but the pictures do not show up. 
-import { blogs } from "./fetch-frontpage-products.js";
+//import { blogs } from "./fetch-frontpage-products.js";
+import { sanity } from "../sanity.js";
 
 export default async function FrontpageBlogs() {
+	const query = `*[_type == "blog"][0...3]{
+		_id,
+		title,
+      preview,
+		"slug": slug.current,
+		"image": image.asset->url, 
+		"altText": image.alt, 
+		}`;
 
-	//const fetchedBlogs = await fetch(blogFrontpage);
-	
-	const frontpageBlogs = await blogs();
+	const frontpageBlogs = await sanity.fetch(query);
+
+	//const frontpageBlogs = await blogs();
 	//const blogies = blogs();
 
 
@@ -23,9 +31,9 @@ export default async function FrontpageBlogs() {
 		const frontpageBlogContainer = document.createElement('div');
 		const frontpageBlogHeader = document.createElement('h3');
 		
-		frontpageBlogContainer.className = 'frontpage-blog';
+		frontpageBlogContainer.className = 'frontpage-blog grid';
 
-		frontpageBlogHeader.className = 'frontpage-blog__header';
+		frontpageBlogHeader.className = 'frontpage-blog__header grid__column--12';
 		frontpageBlogHeader.textContent = 'LATEST BLOG POSTS';
 
 		frontpageBlogContainer.appendChild(frontpageBlogHeader);
@@ -34,7 +42,7 @@ export default async function FrontpageBlogs() {
 			const frontpageBlogCard = document.createElement('div');
 
 			const frontpageBlogImageBox = document.createElement('figure');
-			const frontpageBlogImage = document.createElement('image');
+			const frontpageBlogImage = document.createElement('img');
 			const frontpageBlogPreview = document.createElement('div');
 			const frontpageBlogTitle = document.createElement('div');
 
@@ -45,12 +53,12 @@ export default async function FrontpageBlogs() {
 			frontpageBlogCard.appendChild(frontpageBlogTitle);
 			frontpageBlogCard.appendChild(frontpageBlogPreview);
 
-			frontpageBlogCard.className = 'frontpage-blog__card';
+			frontpageBlogCard.className = 'frontpage-blog__card grid__column--2';
 
 			frontpageBlogImageBox.className = 'frontpage-blog__image-box';
 			frontpageBlogImage.className = 'frontpage-blog__image';
 			
-			frontpageBlogImage.src = frontpageBlog.cover;
+			frontpageBlogImage.src = frontpageBlog.image;
 			frontpageBlogImage.alt = frontpageBlog.altText;
 			
 			frontpageBlogPreview.className = 'frontpage-blog__preview'
@@ -59,7 +67,7 @@ export default async function FrontpageBlogs() {
 			frontpageBlogTitle.className = 'frontpage-blog__title';
 			frontpageBlogTitle.innerText = frontpageBlog.title;
 			
-			console.log(frontpageBlogContainer);
+			//console.log(frontpageBlogContainer);
 		}
 		return frontpageBlogContainer
 	}

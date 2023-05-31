@@ -1,25 +1,26 @@
 /**
   @TODO create the right path for the link of pattern titles
  */
-import FetchProductFrontPage from "./fetch-frontpage-products.js";
+//import FetchProductFrontPage from "./fetch-frontpage-products.js";
+import { sanity } from "../sanity.js";
 
 export default async function FrontpagePatterns() {
-/*	const query = `*[_type == "pattern"][0...3]{
+	const query = `*[_type == "pattern"][0...3]{
 		title,
 		"slug": slug.current,
 		"cover": firstImage.asset->url, 
 		"altText": firstImage.alt,
 	 }`;
 
-	 const frontpagePatterns = await sanity.fetch(query);*/
-const frontpagePatterns = await FetchProductFrontPage();
+	 const frontpagePatterns = await sanity.fetch(query);
+//const frontpagePatterns = await FetchProductFrontPage();
 
 	 function createFrontpagePatternContainerDOM() {
 		const frontpagePatternContainer = document.createElement('div');
 		const frontpagePatternHeader = document.createElement('h3');
 		const frontpagePatternButton = document.createElement('a');
 
-		frontpagePatternContainer.className = 'frontpage-pattern grid';
+		frontpagePatternContainer.className = 'frontpage-pattern';
 
 		frontpagePatternHeader.className = 'frontpage-pattern__header grid__column--12';
 		frontpagePatternHeader.textContent = 'AVAILABLE PATTERNS';
@@ -34,10 +35,10 @@ const frontpagePatterns = await FetchProductFrontPage();
 		for (const frontpagePattern of frontpagePatterns) {
 			const frontpagePatternCard = document.createElement('div');
 			
-			const frontpagePatternLink = document.createElement('a');
 			const frontpagePatternImageBox = document.createElement('figure');
 			const frontpagePatternImage = document.createElement('img');
 			const frontpagePatternTitle = document.createElement('div');
+			const frontpagePatternLink = document.createElement('a');
 			
 			
 			frontpagePatternContainer.appendChild(frontpagePatternCard);
@@ -48,7 +49,7 @@ const frontpagePatterns = await FetchProductFrontPage();
 			frontpagePatternCard.appendChild(frontpagePatternTitle);
 			frontpagePatternLink.appendChild(frontpagePatternTitle);
 			
-			frontpagePatternCard.className = 'frontpage-pattern__card grid__column--2';
+			frontpagePatternCard.className = 'frontpage-pattern__card grid__column--3';
 			
 			frontpagePatternImageBox.className = 'frontpage-pattern__image-box';
 
