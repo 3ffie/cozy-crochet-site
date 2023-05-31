@@ -27,7 +27,7 @@ export default async function FrontpagePatterns() {
 
 		frontpagePatternButton.className = 'frontpage-pattern__button';
 		frontpagePatternButton.textContent = 'See More';
-		frontpagePatternButton.href = "/pattern/index.html"; 
+		frontpagePatternButton.href = "/patterns/index.html"; 
 		
 		frontpagePatternContainer.appendChild(frontpagePatternHeader);
 		frontpagePatternContainer.appendChild(frontpagePatternButton);
@@ -61,7 +61,7 @@ export default async function FrontpagePatterns() {
 			frontpagePatternTitle.innerText = frontpagePattern.title;
 
 			frontpagePatternLink.className = 'frontpage-pattern__page-link';
-			frontpagePatternLink.href = "/pattern/index.html"
+			frontpagePatternLink.href = "/patterns/index.html"
 			console.log(frontpagePatternContainer);
 		}
 		return frontpagePatternContainer;
