@@ -20,12 +20,12 @@ export default async function FrontpagePatterns() {
 		const frontpagePatternHeader = document.createElement('h3');
 		const frontpagePatternButton = document.createElement('a');
 
-		frontpagePatternContainer.className = 'frontpage-pattern';
+		frontpagePatternContainer.className = 'frontpage-pattern grid';
 
 		frontpagePatternHeader.className = 'frontpage-pattern__header grid__column--12';
 		frontpagePatternHeader.textContent = 'AVAILABLE PATTERNS';
 
-		frontpagePatternButton.className = 'frontpage-pattern__button';
+		frontpagePatternButton.className = 'frontpage-pattern__button grid__column--12';
 		frontpagePatternButton.textContent = 'See More';
 		frontpagePatternButton.href = "/patterns/index.html"; 
 		
@@ -49,7 +49,7 @@ export default async function FrontpagePatterns() {
 			frontpagePatternCard.appendChild(frontpagePatternTitle);
 			frontpagePatternLink.appendChild(frontpagePatternTitle);
 			
-			frontpagePatternCard.className = 'frontpage-pattern__card grid__column--3';
+			frontpagePatternCard.className = 'frontpage-pattern__card grid grid__column--4';
 			
 			frontpagePatternImageBox.className = 'frontpage-pattern__image-box';
 

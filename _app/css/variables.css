@@ -1,5 +1,5 @@
 :root {
-	/*colors*/
+	/*Colors*/
 	--color-header: #FFD8A9;
 	--color-background: #FDEEDC;
 	--color-foreground: #883F3F;
@@ -10,17 +10,19 @@
 	--color-font-text: black;
 	--button-hover-color: #400400;
 
-	/*fontsize*/
+	/*Fontsize*/
 	--fontsize-header-navigation: 1.5rem;
-
 	--fontsize-title-large: 4rem;
 	--fontsize-title-medium: 3rem;
 	--fontsize-title-small: 1.5rem;
-
-	--fontsize-text-medium: ;
 	--fontsize-text-small: 1.1rem;
-	
-	/*padding and margin*/
+
+	/*Font family*/
+	--font-family-coiny-header: 'Coiny', cursive;
+	--font-family-concert-menu: 'Concert One', cursive;
+	--font-family-rufina-bodytext: 'Rufina', serif; /*In regular 400 and bold 700*/
+
+	/*Padding and margin*/
 	--padding-gap: 1rem;
 	--padding-gap-medium: 1.5rem;
 	--margin-gap: 2rem;

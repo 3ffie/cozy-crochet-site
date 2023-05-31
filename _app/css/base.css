@@ -1,9 +1,10 @@
 body {
 	/* font-size: 16px;
 	I do not have a deined font-size*/
-	font-family: 'Rufina', serif;
+	font-family: var(--font-family-rufina-bodytext);
 	background-color: var(--color-background);
 	color: var(--color-font-text);
+	width: 100vw;
 	/*overflow-x: hidden;*/
 }
 
@@ -13,13 +14,15 @@ a:hover {
 
 main {
 	font-size: 2rem;
+	width: 100vw;
 }
 
 h3 {
 	font-size: 4rem;
-	font-family: 'Coiny', cursive;
+	font-family: var(--font-family-coiny-header);
 	color: var(--color-font-title);
 }
+
 /*Mobile*/
 @media screen and (max-width: 1024px) {
 	main {
