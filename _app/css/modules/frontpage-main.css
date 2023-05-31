@@ -6,29 +6,23 @@
 	margin: var(--margin-gap-medium);
 }
 
-/*patterns*/
+/*Patterns*/
 .frontpage-pattern {
-	display: grid;
-	/*display: flex;
-	flex-direction: row;
 	background-color: var(--color-foreground-pattern-box);
-	margin: 0 2rem;
-	flex: 1;*/
+	padding: 3rem;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 }
 
 .frontpage-pattern__card {
-	display: flex;
+	display: flex; 
 	flex-direction: column;
 	width: 100%;
 	height: 30rem;
-	padding: 2.5rem;
+	padding: 1rem;
 	padding-bottom: 1rem;
 	margin-bottom: 1rem;
-	
-	
-	/*width: 100%;
-	height: 100%;
-	background-color: blue;*/
 }
 
 .frontpage-pattern__image-box {
@@ -37,12 +31,13 @@
 	overflow: hidden;
 }
 
-
 .frontpage-pattern__image {
 	border-radius: 100px 100px;
 	height: 100%;
 	width: 100%;
-	background-size: 100%;
+	object-fit: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .frontpage-pattern__header {
@@ -52,16 +47,18 @@
 
 .frontpage-pattern__button {
 	background-color: var(--color-foreground);
+	font-size: var(--fontsize-title-small);
+	font-family: var();
+	border: 2px;
+	padding: 1rem;
 	color: white;
 	height: fit-content;
 	width: fit-content;
 	border-radius: 50px;
-	
-
-	grid-column: 1 / 12;
 	justify-self: center;
-	border: 2px;
-	padding: 1rem;
+	grid-row-start: auto;
+	justify-content: end;
+	grid-row: 5;
 }
 
 /*BLOG */
