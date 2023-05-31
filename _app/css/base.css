@@ -1,11 +1,13 @@
 body {
 	/* font-size: 16px;
-	I do not have a deined font-size*/
+	I do not have a defined font size because it means that the text is not universally designed. 
+	If the font was a fixed size, it would not increase automatically when zoomed in or out.
+	*/
 	font-family: var(--font-family-rufina-bodytext);
 	background-color: var(--color-background);
 	color: var(--color-font-text);
 	width: 100vw;
-	/*overflow-x: hidden;*/
+	overflow-x: hidden;
 }
 
 a:hover {
@@ -13,7 +15,7 @@ a:hover {
 }
 
 main {
-	font-size: 2rem;
+	font-size: var(--fontsize-text-small);
 	width: 100vw;
 }
 
@@ -26,7 +28,7 @@ h3 {
 /*Mobile*/
 @media screen and (max-width: 1024px) {
 	main {
-		font-size: 1.5rem;
+		font-size: var(--fontsize-text-small);
 	}
 
 	h3 {
@@ -36,10 +38,10 @@ h3 {
 /*Tablet*/
 @media screen and (min-width: 1025px) and (max-width: 1280px){
 	main {
-		font-size: 1.8rem;
+		font-size: var(--fontsize-text-small);
 	}
 
 	h3 {
-		font-size: 3.1rem;
+		font-size: 3rem;
 	}
 }

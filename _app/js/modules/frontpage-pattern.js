@@ -49,7 +49,7 @@ export default async function FrontpagePatterns() {
 			frontpagePatternCard.appendChild(frontpagePatternTitle);
 			frontpagePatternLink.appendChild(frontpagePatternTitle);
 			
-			frontpagePatternCard.className = 'frontpage-pattern__card grid grid__column--4';
+			frontpagePatternCard.className = 'frontpage-pattern__card grid__column--4 grid__column-mobile--12';
 			
 			frontpagePatternImageBox.className = 'frontpage-pattern__image-box';
 
