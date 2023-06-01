@@ -33,7 +33,7 @@
 	margin-bottom: 1rem;
 }
 
-.frontpage-pattern__image-box {
+.frontpage-pattern__image--box {
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
@@ -89,7 +89,7 @@
 	margin-bottom: 1rem;
 }
 
-.frontpage-blog__image-box {
+.frontpage-blog__image--box {
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
