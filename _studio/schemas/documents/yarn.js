@@ -1,6 +1,3 @@
-/**
- * @TODO fix the preview for yarn brand
- */
 export default {
 	title: 'Yarn',
 	name: 'yarn',
@@ -17,15 +14,6 @@ export default {
 			name: 'nameOfYarn',
 			type: 'string',
 		},
-		/*{
-			title: 'Slug',
-			name: 'slug',
-			type: 'slug',
-			validation: rule => rule.required(),
-			options: {
-				source: 'yarn'
-			}
-		},*/
 		{
 			title: 'Color',
 			name: 'color',
