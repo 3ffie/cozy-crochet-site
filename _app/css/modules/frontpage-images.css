@@ -1,8 +1,8 @@
-.main-frontpage__image-container {
+.main-frontpage__image--container {
  	width: 100vw;
 }
 
-.main-frontpage__image-container img {
+.main-frontpage__image--container img {
 	width: 100%;
 }
 

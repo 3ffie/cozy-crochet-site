@@ -13,7 +13,7 @@ export default async function FetchUnsplashImages() {
 	const endpointCollection = `${baseUrl}collections/${collectionID}/photos?client_id=${clientID}`;
 
 	
-	const getImageContainer = document.querySelector('.main-frontpage__image-container');
+	const getImageContainer = document.querySelector('.main-frontpage__image--container');
 	const imageDisplay = document.querySelector('.main-frontpage__image');
 	
 	// For this function i used the example from this video : https://www.youtube.com/watch?v=m_KtZDl7J1k

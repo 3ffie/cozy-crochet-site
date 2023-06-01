@@ -12,21 +12,21 @@
 	margin-top: 4rem;
 }
 
-.footer__icons-facebook {
+.footer__icons--facebook {
 	background-image: url(../../assets/images/icons8-facebook-40.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
-.footer__icons-instagram {
+.footer__icons--instagram {
 	background-image: url(../../assets/images/icons8-instagram-40.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
-.footer__icons-pinterest {
+.footer__icons--pinterest {
 	background-image: url(../../assets/images/icons8-pinterest-40.png);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -55,7 +55,7 @@
 
 /*Mobile*/
 @media screen and (max-width: 1024px) {
-	.footer__content-list {
+	.footer__content--list {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;

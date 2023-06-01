@@ -43,7 +43,7 @@ export default async function FrontpageBlogs() {
 
 			frontpageBlogCard.className = 'frontpage-blog__card grid__column--4 grid__column-mobile--12';
 
-			frontpageBlogImageBox.className = 'frontpage-blog__image-box';
+			frontpageBlogImageBox.className = 'frontpage-blog__image--box';
 			frontpageBlogImage.className = 'frontpage-blog__image';
 			
 			frontpageBlogImage.src = frontpageBlog.image;

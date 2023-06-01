@@ -30,7 +30,7 @@ export default async function BlogList() {
 
 			blogCard.setAttribute('href',`/recipe/?${blog.slug}`);
 			blogCard.className = 'blog__card grid__column--4 grid__column-mobile--12';
-			blogImageBox.className = 'blog__image-box';
+			blogImageBox.className = 'blog__image--box';
 
 			console.log(blogCard);
 			blogImage.className = 'blog__image';

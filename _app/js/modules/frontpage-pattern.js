@@ -50,7 +50,7 @@ export default async function FrontpagePatterns() {
 			
 			frontpagePatternCard.className = 'frontpage-pattern__card grid__column--4 grid__column-mobile--12';
 			
-			frontpagePatternImageBox.className = 'frontpage-pattern__image-box';
+			frontpagePatternImageBox.className = 'frontpage-pattern__image--box';
 
 			frontpagePatternImage.className = 'frontpage-pattern__image';
 			frontpagePatternImage.src = frontpagePattern.cover;
