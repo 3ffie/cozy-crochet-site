@@ -10,6 +10,14 @@ export function readUrl() {
 			  return (urlString.slice(1)); // slice remove the "?" from the url
 		 }
 	}
+ 
+	// I think may use this for the blog posts
+	/*if	(allUrl.includes('blog')) {
+		 const urlString = window.location.search;
+		 if	(urlString) {
+			  return (urlString.slice(1)); // slice remove the "?" from the url
+		 }
+	}*/
 	return allUrl;
 };
 

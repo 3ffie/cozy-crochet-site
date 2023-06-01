@@ -28,8 +28,7 @@ export default async function FrontpageBlogs() {
 		frontpageBlogContainer.appendChild(frontpageBlogHeader);
 
 		for (const frontpageBlog of frontpageBlogs) {
-			const frontpageBlogCard = document.createElement('div');
-
+			const frontpageBlogCard = document.createElement('a');
 			const frontpageBlogImageBox = document.createElement('figure');
 			const frontpageBlogImage = document.createElement('img');
 			const frontpageBlogPreview = document.createElement('div');
@@ -38,9 +37,9 @@ export default async function FrontpageBlogs() {
 			frontpageBlogContainer.appendChild(frontpageBlogCard);
 			frontpageBlogCard.appendChild(frontpageBlogImageBox);
 			frontpageBlogImageBox.appendChild(frontpageBlogImage);
-
 			frontpageBlogCard.appendChild(frontpageBlogTitle);
 			frontpageBlogCard.appendChild(frontpageBlogPreview);
+			frontpageBlogCard.setAttribute('href',`/recipe/?${frontpageBlog.slug}`);
 
 			frontpageBlogCard.className = 'frontpage-blog__card grid__column--4 grid__column-mobile--12';
 
