@@ -1,0 +1,47 @@
+.main-about__intro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--color-foreground);
+	color: white;
+	padding: 5rem;
+}
+
+.main-about__intro--header {
+	font-family: var(--font-family-concert-menu);
+	font-size: 3rem;
+	margin-bottom: var(--margin-gap);
+	margin-top: var(--margin-gap);
+}
+
+.main-about__textbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 6rem;
+	padding: 5rem;
+}
+
+h5 {
+	font-family: var(--font-family-concert-menu);
+	color: var(--color-foreground);
+	font-size: 3rem;
+	margin-bottom: 2rem;
+}
+
+.main-about__textbox--image img {
+	border-radius: 500px 500px;
+	height: 400px;
+}
+
+/*Mobile*/
+@media screen and (max-width: 1024px) {
+	.main-about__textbox {
+		display: flex;
+		flex-direction: column;
+	}
+
+	h5 {
+		font-size: 2.5rem;
+	}
+}
