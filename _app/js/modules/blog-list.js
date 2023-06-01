@@ -2,6 +2,7 @@ import { sanity } from "../sanity.js";
 
 export default async function BlogList() {
 	const query = `*[_type == 'blog']{
+		"slug": slug.current,
 		"image": image.asset->url,
 		"blogAltText": image.alt,
 		title,
@@ -15,7 +16,7 @@ export default async function BlogList() {
 			blogListContainer.className = 'blog-list grid grid__column-mobile--12';
 
 		for (const blog of blogs) {
-			const blogCard = document.createElement('div');
+			const blogCard = document.createElement('a');
 			const blogImageBox = document.createElement('figure');
 			const blogImage = document.createElement('img')
 			const blogTitle = document.createElement('div');
@@ -27,6 +28,7 @@ export default async function BlogList() {
 			blogCard.appendChild(blogTitle);
 			blogCard.appendChild(blogPreviewText);
 
+			blogCard.setAttribute('href',`/recipe/?${blog.slug}`);
 			blogCard.className = 'blog__card grid__column--4 grid__column-mobile--12';
 			blogImageBox.className = 'blog__image-box';
 

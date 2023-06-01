@@ -12,6 +12,7 @@ body {
 
 a:hover {
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 main {
