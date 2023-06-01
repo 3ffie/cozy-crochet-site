@@ -1,6 +1,5 @@
 /**
  * @TODO add a link section to the schema
- *
  */
 export default {
 	title: 'Pattern',
@@ -82,21 +81,6 @@ export default {
 					]
 				}
 			]
-			/*fields: [
-				{
-					title: 'Yarn',
-					name: 'yarn',
-					type: 'array',
-					of: [
-						{type: 'yarn'}
-					]
-				},
-				{
-					title: 'Quantity',
-					name: 'Quantity',
-					type: 'number',
-				},
-			]*/
 		},
 		{
 			title: 'Instructions',
@@ -114,35 +98,5 @@ export default {
 			]},
 			]
 		}
-		/*{
-			title: 'Instruction',
-			name: 'instruction',
-			type: 'array',
-			of: [
-				{
-					type: 'object',
-					fields: [
-						{
-							title: 'Instruction Text',
-							name: 'instructionText',
-							type: 'text',
-						},
-						{
-							title: 'Instruction Image',
-							name: 'nnstructionImage',
-							type: 'image',
-							fields: [
-								{ 
-								  name: 'alt',
-								  type: 'string',
-								  validation: rule => rule.required()
-								}
-							 ]
-						}
-					]
-				}
-			]
-		}*/
-
 	]
 }
