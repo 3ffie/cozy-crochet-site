@@ -4,6 +4,7 @@
 @import "./fonts.css";
 @import "./grid.css";
 
+@import "./modules/about-page.css";
 @import "./modules/header.css";
 @import "./modules/frontpage-main.css";
 @import "./modules/blog-list.css";
