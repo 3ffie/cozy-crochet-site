@@ -13,6 +13,7 @@
 	margin-bottom: 1rem;
 	background-color: var(--color-header);
 	border-radius: 100px 100px;
+	text-align: center;
 }
 
 .blog__image-box {
@@ -36,14 +37,12 @@
 	font-weight: 700;
 	font-size: var(--fontsize-title-small);
 	padding: 1rem;
-	text-align: center;
 }
 
 .blog__preview {
 	font-family: 'Rufina', serif;
 	font-size: var(--fontsize-text-small);
 	padding: 0 1rem;
-	text-align: center;
 }
 
 /*Tablet*/

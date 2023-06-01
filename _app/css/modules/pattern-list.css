@@ -46,6 +46,7 @@
 		grid-column-end: span 6;
 	}
 }
+
 /*Mobile*/
 @media screen and (max-width: 1024px) {
 	.pattern__title {

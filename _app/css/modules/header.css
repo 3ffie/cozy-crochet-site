@@ -26,8 +26,8 @@
 	justify-content: space-between;
 	align-items: center;
 	gap: 2rem;
-	
 }
+
 .navigation__hamburger {
 	display: none;
 	cursor: pointer;
@@ -72,7 +72,7 @@
 	}
 
 	.navigation__list-item {
-		margin: 1rem 0.5rem;
+		margin: 1rem 0.6rem;
 	}
 
 	.navigation__list.active {
