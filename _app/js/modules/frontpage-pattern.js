@@ -13,7 +13,6 @@ export default async function FrontpagePatterns() {
 	 }`;
 
 	 const frontpagePatterns = await sanity.fetch(query);
-//const frontpagePatterns = await FetchProductFrontPage();
 
 	 function createFrontpagePatternContainerDOM() {
 		const frontpagePatternContainer = document.createElement('div');
@@ -59,9 +58,10 @@ export default async function FrontpagePatterns() {
 
 			frontpagePatternTitle.className = 'frontpage-pattern__title';
 			frontpagePatternTitle.innerText = frontpagePattern.title;
-
+			
+			// Attribute added so that patternCard is given a path to the dynamic recipe page, with slug.current.
+			frontpagePatternLink.setAttribute('href',`/recipe/?${frontpagePattern.slug}`);
 			frontpagePatternLink.className = 'frontpage-pattern__page-link';
-			frontpagePatternLink.href = "/patterns/index.html"
 			console.log(frontpagePatternContainer);
 		}
 		return frontpagePatternContainer;

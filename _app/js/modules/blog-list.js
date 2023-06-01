@@ -1,6 +1,3 @@
-/**
- * @TODO put in alt text src and in query
- */
 import { sanity } from "../sanity.js";
 
 export default async function BlogList() {

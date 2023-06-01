@@ -43,7 +43,6 @@ export default async function GetRecipeSlug() {
 			recipeInstructionBox.className = 'recipe__Instruction--box';
 			recipeInstruction.className = 'recipe__Instruction';
 		
-			
 			recipeTitle.textContent = `${recipe[0].title}`;
 			recipeTitle.className = 'recipe__title';
 			

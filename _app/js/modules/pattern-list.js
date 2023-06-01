@@ -13,16 +13,15 @@ export default async function PatternList() {
 	 function createPatternListContainerDOM() {
 		const patternListContainer = document.createElement('div');
 			patternListContainer.className = 'pattern-list grid grid__column-mobile--12';
-
+		// A for each so that all patterns get the same variables.
 		for (const pattern of patterns) {
 			const patternCard = document.createElement('a');
 			const patternImageBox = document.createElement('figure');
 			const patternImage = document.createElement('img')
 			const patternTitle = document.createElement('div');
-
+			
+			// Attribute added so that patternCard is given a path to the dynamic recipe page, with slug.current.
 			patternCard.setAttribute('href',`/recipe/?${pattern.slug}`);
-			/*patternCard.setAttribute('href',`/_app/recipe/index.html?pattern=${pattern.slug}`);*/
-			/*console.log(pattern.slug)*/
 
 			patternListContainer.appendChild(patternCard);
 			patternCard.appendChild(patternImageBox);
@@ -43,6 +42,7 @@ export default async function PatternList() {
 	}
 
 	 function renderHTML() {
+		// main-pattern is selected here so that the pattern container is contained in the main-pattern element. 
 		const mainElement = document.querySelector('.main-pattern'); 
 		const patternListContainer = createPatternListContainerDOM();
 

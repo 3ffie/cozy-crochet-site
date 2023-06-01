@@ -1,6 +1,7 @@
-//import FetchProductFrontPage from "./fetch-frontpage-products.js";
-// imported this function to get the blog posts, but the pictures do not show up. 
-//import { blogs } from "./fetch-frontpage-products.js";
+/**
+ * @todo fix the path to blog and the fetch file. 
+ * make the pictures show up
+ */
 import { sanity } from "../sanity.js";
 
 export default async function FrontpageBlogs() {
@@ -14,18 +15,6 @@ export default async function FrontpageBlogs() {
 		}`;
 
 	const frontpageBlogs = await sanity.fetch(query);
-
-	//const frontpageBlogs = await blogs();
-	//const blogies = blogs();
-
-
-	/**
-	 * 
-	 * 
-	 * @todo fix the path to blog and the fetch file. 
-	 * make the picture show up
-	 * make it pretty!!
-	 */
 
 	function createFrontpageBlogContainerDOM() {
 		const frontpageBlogContainer = document.createElement('div');
