@@ -1,7 +1,6 @@
-/*import renderImage from "./render-unsplash-images.js";*/
+import { clientID } from "../env.js";
 
 export default async function FetchUnsplashImages() {
-	const clientID = 'vBx-m6gPaCUANQ5Nal6Mzclyo6l_JI-yiSUs-CBLWmQ';
 	const baseUrl = 'https://api.unsplash.com/';
 	const collectionID = 'j3Z41iologs';
 	const options = {
@@ -11,26 +10,26 @@ export default async function FetchUnsplashImages() {
 		}
 	}
 	const endpointCollection = `${baseUrl}collections/${collectionID}/photos?client_id=${clientID}`;
-
-	
-	const getImageContainer = document.querySelector('.main-frontpage__image--container');
 	const imageDisplay = document.querySelector('.main-frontpage__image');
 	
 	// For this function i used the example from this video : https://www.youtube.com/watch?v=m_KtZDl7J1k
-	
-		let randomImage = await getNewImage();
+	// I wanted to use .then because i understand this method of async funtion more than try/catch.
+	// Here the function takes the response in json, then the data gets a random number from radnomNumber fuction
+	// and returnes the image url in the regular size. 
+	// when the page reloades a new image will display. 
+	let randomImage = await getNewImage();
 		console.log(randomImage)
 		imageDisplay.src = randomImage;
 	
-
 	async function getNewImage() {
 		let randomNumber = Math.floor(Math.random() * 10);
-		return fetch(endpointCollection)
+
+		return fetch(endpointCollection, options)
 		.then((response) => response.json())
 		.then((data) => {
 			console.log(data);
+
 			let image = data[randomNumber];
-			console.log(image)
 			return image.urls.regular;
 		});
 	}
