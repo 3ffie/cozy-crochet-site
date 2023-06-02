@@ -2,13 +2,11 @@
  	width: 100vw;
 }
 
-.main-frontpage__image--container img {
-	width: 100%;
-}
-
-
 .main-frontpage__image {
+	height: 65vh;
 	width: 100%;
-	height: 70vh;
-	border:1px solid black;
+	object-fit: cover;
+	background-image: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
