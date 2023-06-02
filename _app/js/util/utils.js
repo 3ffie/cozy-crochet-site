@@ -11,7 +11,7 @@ export function readUrl() {
 		 }
 	}
  
-	// I think may use this for the blog posts
+	// I think may use this for the blog posts page
 	/*if	(allUrl.includes('blog')) {
 		 const urlString = window.location.search;
 		 if	(urlString) {

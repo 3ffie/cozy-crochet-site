@@ -1,5 +1,5 @@
-import GetRecipeSlug from "./modules/get-recipe.js";
+import FetchRecipeSlug from "./modules/fetch-recipe-patterns.js";
 import Navigation from "./modules/navigation.js";
 
-await GetRecipeSlug();
+await FetchRecipeSlug();
 Navigation();
