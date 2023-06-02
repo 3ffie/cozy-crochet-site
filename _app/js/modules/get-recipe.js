@@ -55,6 +55,9 @@ export default async function GetRecipeSlug() {
 			recipeMaterials.textContent = `${recipe[0].materials}`;
 			recipeYarn.textContent = `${recipe[0].yarn}`;
 			recipeInstruction.textContent = `${recipe[0].Instruction.assets}`;
+			// The instruktions, materials and yarn shows up as Object.object and so on. 
+			// Having problems properly fetching the instructions content from sanity. 
+			// I need to find the right query to fetch I vision, so that all text, images and object appear on the page.
 
 			recipeContainer.appendChild(recipeTitle);
 			recipeContainer.appendChild(recipeCover);

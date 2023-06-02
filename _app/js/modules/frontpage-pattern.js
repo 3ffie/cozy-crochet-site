@@ -1,7 +1,7 @@
 /**
   @TODO create the right path for the link of pattern titles
  */
-//import FetchProductFrontPage from "./fetch-frontpage-products.js";
+
 import { sanity } from "../sanity.js";
 
 export default async function FrontpagePatterns() {

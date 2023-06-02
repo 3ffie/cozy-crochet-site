@@ -12,6 +12,7 @@ export default async function PatternList() {
 
 	 function createPatternListContainerDOM() {
 		const patternListContainer = document.createElement('div');
+			
 			patternListContainer.className = 'pattern-list grid grid__column-mobile--12';
 		// A for each so that all patterns get the same variables.
 		for (const pattern of patterns) {
@@ -20,7 +21,7 @@ export default async function PatternList() {
 			const patternImage = document.createElement('img')
 			const patternTitle = document.createElement('div');
 			
-			// Attribute added so that patternCard is given a path to the dynamic recipe page, with slug.current.
+			// Attribute added so that when the patternCard is clicked, it redirect to a to the dynamic recipe page, with slug.current.
 			patternCard.setAttribute('href',`/recipe/?${pattern.slug}`);
 
 			patternListContainer.appendChild(patternCard);
@@ -42,7 +43,7 @@ export default async function PatternList() {
 	}
 
 	 function renderHTML() {
-		// main-pattern is selected here so that the pattern container is contained in the main-pattern element. 
+		//I append main-blog in index to the container so that the footer will lay under the content from Sanity. 
 		const mainElement = document.querySelector('.main-pattern'); 
 		const patternListContainer = createPatternListContainerDOM();
 
