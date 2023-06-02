@@ -12,8 +12,9 @@ export default async function FetchUnsplashImages() {
 	const endpointCollection = `${baseUrl}collections/${collectionID}/photos?client_id=${clientID}`;
 	const imageDisplay = document.querySelector('.main-frontpage__image');
 	
-	// For this function i used the example from this video : https://www.youtube.com/watch?v=m_KtZDl7J1k
+	// For this function i used the example from this video : https://www.youtube.com/watch?v=m_KtZDl7J1k.
 	// I wanted to use .then because i understand this method of async funtion more than try/catch.
+
 	// Here the function takes the response in json, then the data gets a random number from radnomNumber fuction
 	// and returnes the image url in the regular size. 
 	// when the page reloades a new image will display. 
@@ -33,15 +34,4 @@ export default async function FetchUnsplashImages() {
 			return image.urls.regular;
 		});
 	}
-
-
-
-
-	/*const response = await fetch(endpointCollection, options);
-	const output = await response.json();
-	console.log(output);
-
-	renderImage`${output.alt_description}`;
-	return output;*/
-
 }

@@ -11,6 +11,10 @@
 	padding: 2.5rem;
 	padding-bottom: 1rem;
 	margin-bottom: 1rem;
+	background-color: var(--color-header);
+	border-radius: 100px 100px;
+	text-align: center;
+	background: linear-gradient(135deg, rgba(255,216,169,1) 30%, rgb(253, 181, 181) 98%);
 }
 
 .pattern__image--box {
@@ -27,13 +31,14 @@
 	object-fit: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	border-radius: 100px 100px;
 }
 
 .pattern__title {
 	font-family: 'Rufina', serif;
 	font-size: var(--fontsize-title-small);
 	padding: 1rem;
-	background-color: var(--color-header)
+	background-color: inherit;
 }
 
 /*Tablet*/

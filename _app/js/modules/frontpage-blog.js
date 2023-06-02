@@ -40,6 +40,11 @@ export default async function FrontpageBlogs() {
 			frontpageBlogCard.appendChild(frontpageBlogTitle);
 			frontpageBlogCard.appendChild(frontpageBlogPreview);
 			frontpageBlogCard.setAttribute('href',`/recipe/?${frontpageBlog.slug}`);
+			// At the moment the content in the blog posts are empty when clicked and i will add more content in them soon.
+			
+			// The blog posts have a wrong href path appended to them.
+			// I need to redirect the "blog card" to a new index and make a new function 
+			// for the blog posts dynamic page. This so that it does not collide with the already made function for recipies.
 
 			frontpageBlogCard.className = 'frontpage-blog__card grid__column--4 grid__column-mobile--12';
 
