@@ -2,7 +2,7 @@ import { readUrl } from "../util/utils.js";
 import { sanity } from "../sanity.js"
 
 //function for dynamic page for all patterns
-export default async function GetRecipeSlug() {
+export default async function FetchRecipeSlug() {
 	const slug = readUrl();
 
 	const query = `*[_type == 'pattern' && slug.current == "${slug}"]{

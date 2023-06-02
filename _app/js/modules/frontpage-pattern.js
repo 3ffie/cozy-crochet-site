@@ -1,7 +1,3 @@
-/**
-  @TODO create the right path for the link of pattern titles
- */
-
 import { sanity } from "../sanity.js";
 
 export default async function FrontpagePatterns() {
