@@ -29,4 +29,9 @@
 *.local
 
 node_modules
+.Trashes
+Thumbs.db
+desktop.ini
+.vscode
+dist
 /app/js/env.js
