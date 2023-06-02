@@ -8,7 +8,7 @@ Here i want to render a list of crochet patterns and render a list of blog posts
 
 ## Deployment 
 The site is deployed on [Netlify](https://cozy-crochet.netlify.app/) and the source code can be found on [Github](https://github.com/3ffie/cozy-crochet-site).
-Sanity link: 
+Sanity link: https://cozycrochet.sanity.studio/
 
 ## Built with
 - Sanity
